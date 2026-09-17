@@ -7,15 +7,32 @@ class Complex{
     void show(){
         cout<<real<<","<<img<<endl;
     }
-    Complex operator + (Complex c){
-        return Complex(real + c.real, img + c.img);
+    // Complex operator + (Complex c){
+    //     return Complex(real + c.real, img + c.img);
+    // }
+    Complex operator + (int x){
+        return Complex(real + x,img+x);
     }
+    friend Complex operator + (Complex c1,Complex c2);
+    friend Complex operator + (int x ,Complex c);
 };
+Complex operator +(Complex c1,Complex c2){
+        return Complex(c1.real+c2.real,c1.img+c2.img);
+    }
+ Complex operator + (int x ,Complex c){
+        return Complex(c.real+x,c.img+x);
+    }
 int main(){
     Complex c1{5,10},c2{10,20},c3;
     // c3 = c1+c2;
-    c1.show();
-    c2.show();
+    // c1.show();
+    // c2.show();
+    // c3.show();
+    // c1 = c1 + 5;
+    // c1.show();
+    // c3 = c1+c2;
+    // c3.show();
+    c3 = 5+c1;
     c3.show();
 
     return 0;
