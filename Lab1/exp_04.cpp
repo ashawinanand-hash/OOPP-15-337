@@ -22,4 +22,5 @@ int main() {
 
     t1.show();
     t2.show();
+    return 0;
 }
