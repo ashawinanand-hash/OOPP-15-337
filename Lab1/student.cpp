@@ -26,5 +26,5 @@ int main() {
     s.input();
     s.display();
 
-    return 0;
+  
 }

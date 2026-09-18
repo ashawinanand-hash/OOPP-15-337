@@ -22,5 +22,5 @@ int main(){
  p2.input();
  p1.show();
  p2.show();
- return 0;
+ 
 }
