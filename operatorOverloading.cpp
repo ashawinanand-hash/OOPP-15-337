@@ -15,11 +15,18 @@ class Complex{
     }
     friend Complex operator + (Complex c1,Complex c2);
     friend Complex operator + (int x ,Complex c);
+
+
+    Complex operator -(){
+        return Complex(-real,-img);
+    }
+
+    
 };
 Complex operator +(Complex c1,Complex c2){
         return Complex(c1.real+c2.real,c1.img+c2.img);
     }
- Complex operator + (int x ,Complex c){
+Complex operator + (int x ,Complex c){
         return Complex(c.real+x,c.img+x);
     }
 int main(){
@@ -32,7 +39,8 @@ int main(){
     // c1.show();
     // c3 = c1+c2;
     // c3.show();
-    c3 = 5+c1;
+    // c3 = 5+c1;
+    c3 = -c1;
     c3.show();
 
     return 0;
