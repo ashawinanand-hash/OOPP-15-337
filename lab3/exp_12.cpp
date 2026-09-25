@@ -11,12 +11,15 @@ void area(int side){
     cout<<"area : "<<side*side<<endl;
 }
 void area(double base,double height,bool traingle){
+    if(traingle == 0){
+        return area(base,height);
+    }
     cout<<"area : "<<0.5*(base)*(height)<<endl;
 }
 int main(){
     area(5.0);
     area(5,6);
     area(4);
-    area(4,5,1);
+    area(4,5,0);
 
 }
